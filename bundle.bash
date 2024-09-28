@@ -113,7 +113,6 @@ confirm() {
     echo "" >&2
 }
 list() {
-    _prompt_text "$1 "
     local opts=("${@:2}")
     local opts_count=$(($# - 1))
     _new_line_foreach_item "${#opts[@]}"
