@@ -60,7 +60,7 @@ _new_line_foreach_item() {
     done
 }
 _prompt_text() {
-    echo -en "${1}\033[0m " >&2
+    # nothing
 }
 _decrement_selected() {
     local selected=$1
