@@ -60,7 +60,7 @@ _new_line_foreach_item() {
     done
 }
 _prompt_text() {
-    echo -en "\033[32m?\033[0m\033[1m ${1}\033[0m " >&2
+    echo -en "${1}\033[0m " >&2
 }
 _decrement_selected() {
     local selected=$1
