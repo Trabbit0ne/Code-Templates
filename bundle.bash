@@ -79,7 +79,6 @@ _increment_selected() {
     echo -n $selected
 }
 input() {
-    _prompt_text "$1"
                        echo -en "\033[36m\c" >&2
     _read_stdin -r text
     echo -n "${text}"
