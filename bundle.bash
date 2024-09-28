@@ -1,29 +1,3 @@
-###############################################################################
-#                                                                             #
-# Bash TUI Toolkit                                                            #
-# by Timo Reymann                                                             #
-#                                                                             #
-# version: 1.8.4                                                              #
-# bundle:  bundle                                                             #
-# github:  https://github.com/timo-reymann/bash-tui-toolkit                   #
-#                                                                             #
-# --------------------------------------------------------------------------- #
-#                                                                             #
-# Copyright (C) 2023 Timo Reymann (mail@timo-reymann.de)                      #
-#                                                                             #
-# Licensed under the Apache License, Version 2.0 (the "License");             #
-# you may not use this file except in compliance with the License.            #
-# You may obtain a copy of the License at                                     #
-#                                                                             #
-#         http://www.apache.org/licenses/LICENSE-2.0                          #
-#                                                                             #
-# Unless required by applicable law or agreed to in writing, software         #
-# distributed under the License is distributed on an "AS IS" BASIS,           #
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.    #
-# See the License for the specific language governing permissions and         #
-# limitations under the License.                                              #
-#                                                                             #
-###############################################################################
 _read_stdin() {
     read $@ </dev/tty
 }
@@ -60,7 +34,7 @@ _new_line_foreach_item() {
     done
 }
 _prompt_text() {
-    echo -en "\033[32m?\033[0m\033[1m ${1}\033[0m " >&2
+    echo -en "${1}\033[0m " >&2
 }
 _decrement_selected() {
     local selected=$1
