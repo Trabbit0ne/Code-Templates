@@ -104,7 +104,7 @@ list() {
         for opt in "${opts[@]}"; do
             _cursor_to $((startrow + idx))
             if [ $idx -eq $selected ]; then
-                printf "\033[0m\033[46m❯\033[0m \033[46m%s\033[0m" "$opt" >&2
+                printf "\033[0m\033[46m❯\033[0m \033[36m%s\033[0m" "$opt" >&2
             else
                 printf "  %s" "$opt" >&2
             fi
@@ -148,7 +148,7 @@ checkbox() {
                 fi
             done
             if [ $idx -eq $selected ]; then
-                printf "%s \e[0m\e[36m❯\e[0m \e[46m%-50s\e[0m" "$icon" "$opt" >&2
+                printf "%s \e[0m\e[34m❯\e[0m \e[44m %-50s\e[0m" "$icon" "$opt" >&2
             else
                 printf "%s   %-50s" "$icon" "$opt" >&2
             fi
