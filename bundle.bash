@@ -59,9 +59,6 @@ _new_line_foreach_item() {
         ((count++))
     done
 }
-_prompt_text() {
-    # nothing
-}
 _decrement_selected() {
     local selected=$1
     ((selected--))
@@ -79,7 +76,6 @@ _increment_selected() {
     echo -n $selected
 }
 input() {
-                       echo -en "\033[36m\c" >&2
     _read_stdin -r text
     echo -n "${text}"
 }
