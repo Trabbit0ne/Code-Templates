@@ -136,7 +136,6 @@ list() {
             down) selected=$(_increment_selected "${selected}" "${opts_count}")  ;;
         esac
     done
-    echo -en "\n" >&2
     _cursor_to "${lastrow}"
     _cursor_blink_on
     echo -n "${selected}"
