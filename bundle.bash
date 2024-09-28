@@ -76,6 +76,7 @@ _increment_selected() {
     echo -n $selected
 }
 input() {
+    echo -en "\033[36m\c" >&2
     _read_stdin -r text
     echo -n "${text}"
 }
@@ -89,7 +90,6 @@ confirm() {
     local current_row
                        current_row=$((start_row - 1))
     local result=""
-    echo -n " " >&2
     while true; do
         echo -e "\033[1D\c " >&2
         _read_stdin -n1 result
