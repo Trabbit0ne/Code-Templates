@@ -254,7 +254,7 @@ range() {
     }
     while true; do
         _prompt_text "$1"
-        printf "\033[37m%s\033[0m \033[1;90m❮\033[0m \033[36m%s%s\033[0m \033[1;90m❯\033[0m \033[37m%s\033[0m\n" "$min" "${padding:${#selected}}" "$selected" "$max" >&2
+        printf "\033[37m%s\033[0m \033[1;90m❮\033[0m \033[36m%s%s\033[0m \033[1;90m❯\033[0m \033[47m%s\033[0m\n" "$min" "${padding:${#selected}}" "$selected" "$max" >&2
         case $(_key_input) in
         enter)
             break
