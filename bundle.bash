@@ -148,7 +148,7 @@ checkbox() {
                 fi
             done
             if [ $idx -eq $selected ]; then
-                printf "%s \e[0m\e[34m❯\e[0m \e[44m %-50s\e[0m" "$icon" "$opt" >&2
+                printf "%s \e[0m\e[34m\e[0m \e[44m %-50s\e[0m" "$icon" "$opt" >&2
             else
                 printf "%s   %-50s" "$icon" "$opt" >&2
             fi
